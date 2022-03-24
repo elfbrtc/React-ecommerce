@@ -2,7 +2,7 @@ import { categories } from './data/categories'
 import { useState } from 'react'
 import {Card} from 'antd'
 import { Button, Menu, Dropdown } from 'antd';
-import './styles.less';
+import './App.css';
 
 import image1 from './assets/images/resim.jpg';
 
