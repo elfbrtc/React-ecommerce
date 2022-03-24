@@ -1,8 +1,10 @@
 import { products } from "./data/products"
 import Categorieshome from './Categorieshome'
 import Navbar from "./Navbar"
-import CategoriCard from "./CategoriCard"
+import CategoryCard from "./CategoryCard"
 import { categories } from "./data/categories"
+import CategoryAbout from "./CategoryAbout"
+import 'antd/dist/antd.css';
 
 
 const Homepage = () => {
@@ -10,7 +12,8 @@ const Homepage = () => {
       <>
         <Categorieshome/>
         <Navbar/>
-        <CategoriCard/>
+        <CategoryAbout/>
+        <CategoryCard/>
       </>
     
   )
