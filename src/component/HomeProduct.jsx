@@ -25,7 +25,7 @@ const HomeProduct = () => {
        {homeProductList.map((categori ,key)=>(
         <div className='flex-div'>
         <Card
-          cover={<img alt="example" src={categori.image135} />}
+          cover={<img alt="example" src={categori.image450} />}
         >
           <Meta title={categori.displayName}/>
 
