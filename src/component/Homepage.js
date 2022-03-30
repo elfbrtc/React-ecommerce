@@ -7,7 +7,7 @@ const Homepage = () => {
   return (
       <>
         <Navbar/>
-        <CategoryCard/>
+        
       </>
     
   )

@@ -1,1 +1,1 @@
-const API_URL= "https://northwind.vercel.app/api"
+export const API_URL= "https://magic-aliexpress1.p.rapidapi.com/api";
