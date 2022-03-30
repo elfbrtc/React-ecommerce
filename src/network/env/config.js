@@ -1,1 +1,1 @@
-export const API_URL= "https://magic-aliexpress1.p.rapidapi.com/api";
+export const API_URL= "https://sephora.p.rapidapi.com";

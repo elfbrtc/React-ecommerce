@@ -27,14 +27,12 @@ const [categories, setCategories] = useState([]);
 
      useEffect(()=> {
        getData();
+
      },[])
 
      const getData= ()=>{
-       baseService.get('/v2/categories').then(data=>setCategories(data))
+       baseService.get('/categories/v2/list-root').then(data => setCategories(data.rootCategories))
      }
-
-
-
 
   return (
     <>
@@ -57,11 +55,13 @@ const [categories, setCategories] = useState([]);
     </div>
     <div className='nav-categori'>
       
-    {categories.slice(0,10).map((categori ,key)=>(
+    {categories.map((categori ,key)=>(
        
-       <Link to={`/${categori._id}/products`}><h3 key={key}>{categori.category_name}</h3></Link>
+       <Link to={`/${categori.categoryId}/products`}><h3 key={key}>{categori.displayName}</h3></Link>
      ))}
     </div>
+
+    
     
     </>
     

@@ -9,7 +9,7 @@ const { Meta } = Card;
 
 
 function CategoryPage() {
-  const { _id } = useParams();
+  const { categoryId} = useParams();
 
   const [categoriesList, setCategoriesList] = useState([]);
 
@@ -18,7 +18,7 @@ function CategoryPage() {
   },[])
 
   const getData= ()=>{
-    baseService.get('/v2/categories').then(data=>setCategoriesList(data))
+    baseService.get('/products/search?q=b&pageSize=20&currentPage=1').then(data=>setCategoriesList(data.products))
   }
 
 
@@ -27,22 +27,22 @@ function CategoryPage() {
     <>
      <Navbar/>
      
-     <div className='flex-container '>
+     {/* <div className='flex-container '>
        {categoriesList.map((categori ,key)=>(
         <div className='flex-div'>
         <Card
           // cover={<img alt="example" src={image1} />}
         >
-          <Meta title={categori.name} description= {categori.description}/>
+          <Meta title={categori.displayName}/>
 
         </Card>
-        <div className='category-button'><Button type="primary">{categori.name} Kategorisi</Button></div>
+        <div className='category-button'><Button type="primary">{categori.displayName} Kategorisi</Button></div>
 
       </div>
 
     ))} 
 
-    </div>
+    </div> */}
     
     </>
   )
