@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 75%;
+    width: 65%;
 } 
 
 .flex-div {
@@ -25,4 +25,57 @@
     align-items: center !important;
 }
 
-  
+.card-detail{
+    height: 100%;
+    cursor: pointer;
+}
+
+body{
+    
+    box-sizing: border-box;
+
+	background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+}
+
+.product-list{
+    
+    margin: 10px;
+    text-align: center;
+}
+
+.row{
+    display: flex;
+}
+
+.nav-categori{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5px;
+    
+    
+}
+.nav-categori h3{
+    padding: 5px;
+    
+    cursor: pointer;
+}
+.nav-categori h3:hover{
+    color: aquamarine;
+}
+
+.nav-search{
+    width: 20%;
+}
+.navbar{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navbar .shopping-cart{
+    
+    cursor: pointer;
+}
+.card-{
+    font-size: 25px;
+}
