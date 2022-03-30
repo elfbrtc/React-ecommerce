@@ -1,11 +1,7 @@
-import { categories } from './data/categories'
 import React, {useState, useEffect} from 'react'
-import {Card, List, Result} from 'antd'
-import './App.css';
-import axios from 'axios';
+import {Card, List} from 'antd'
+import '../style/App.css';
 
-
-import image1 from './assets/images/resim.jpg';
 import { Link } from 'react-router-dom';
 
 const { Meta } = Card;
