@@ -7,7 +7,6 @@ import HomeProduct from "./HomeProduct";
 const Homepage = () => {
   return (
       <>
-        <Navbar/>
         <HomeProduct/>
         
       </>

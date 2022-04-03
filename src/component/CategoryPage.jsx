@@ -18,14 +18,13 @@ function CategoryPage() {
   },[])
 
   const getData= ()=>{
-    baseService.get('/products/search?q=b&pageSize=20&currentPage=1').then(data=>setCategoriesList(data.products))
+    baseService.get('/products/search?q=b&pageSize=10&currentPage=1').then(data=>setCategoriesList(data.products))
   }
 
 
     return (
      
     <>
-     <Navbar/>
      
      {/* <div className='flex-container '>
        {categoriesList.map((categori ,key)=>(

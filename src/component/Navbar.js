@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { baseService } from '../network/services/baseService';
 import {useState, useEffect} from 'react'
 import '../style/App.css';
+import HomeProduct from './HomeProduct';
 
 const { Search } = Input;
 
@@ -21,7 +22,7 @@ const onSearch = value => console.log(value);
 
 
 
-const Navbar = () => {
+const Navbar = (props) => {
 
 const [categories, setCategories] = useState([]);
 
@@ -34,17 +35,40 @@ const [categories, setCategories] = useState([]);
        baseService.get('/categories/v2/list-root').then(data => setCategories(data.rootCategories))
      }
 
+     const[searchTerm, setSearhTerm]= useState([])
+
   return (
     <>
     <div className='navbar'>
+    <div  className='nav-title'>
+      <Link className='logo-link' to="/">Sephora</Link>
+    </div>
     <div className='nav-search'>
       <Search
-      placeholder="input search text"
+      placeholder="Ürün, marka, kategori ara​.."
+      onChange={event => {setSearhTerm(event.target.value)}}
       allowClear
-      enterButton="Search"
       size="large"
       onSearch={onSearch}
+      
     />
+    {/* {categories.filter((val)=>{
+      if (searchTerm== ""){
+        return val
+      }
+      else if(val.displayName.toLowerCase().includes(searchTerm.toLowerCase())){
+        return val
+      }
+    }).map((val,key)=>{
+          <div className="search-product-1" key={key}>
+            {" "}
+            <p>{val.displayName}</p>
+          </div>
+        
+      })} */}
+
+      
+    
     </div>
     <div className='shopping-cart'>
     <Badge count={5}>
@@ -60,6 +84,8 @@ const [categories, setCategories] = useState([]);
        <Link to={`/${categori.categoryId}/products`}><h3 key={key}>{categori.displayName}</h3></Link>
      ))}
     </div>
+
+    <HomeProduct searchTerm={searchTerm} />
 
     
     
